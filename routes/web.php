@@ -13,21 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//	return view('welcome');
-//});
+Route::get('/{foo?}/{greeting?}', function ($foo='bar',$greeting='hello') {
+	return view('welcome',['name'=>$foo,'greeting'=>$greeting]);
+});
 
 //Route::get('/{foo?}', function ($foo='bar') {
 //	return $foo;
 //})->where('foo','[0-9a-zA-Z]{3}');
 
-Route::get('/',[
-    'as' => 'home',
-    function(){
-        return '제 이름은 "home"입니다.';
-    }
-]);
-
-Route::get('/home',function(){
-   return redirect(route('home'));
-});
+//Route::get('/',[
+//    'as' => 'home',
+//    function(){
+//        return view('errors.503');
+//    }
+//]);
+//
+//Route::get('/home',function(){
+//   return redirect(route('home'));
+//});
