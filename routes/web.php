@@ -31,3 +31,5 @@ Route::get('/{foo?}/{greeting?}', function ($foo='bar',$greeting='hello') {
 //Route::get('/home',function(){
 //   return redirect(route('home'));
 //});
+
+
